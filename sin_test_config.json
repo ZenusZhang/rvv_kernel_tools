@@ -1,0 +1,10 @@
+{
+  "golden": "sinf",               
+  "threshold_ulp": 2,             
+  "range_start": -12.566371,      
+  "range_end": 12.566371,         
+  "range_step": 0.01,             
+  "include_specials": true,       
+  "include_large_multiples": true 
+}
+

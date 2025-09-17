@@ -1,0 +1,10 @@
+{
+  "golden": "exp",               
+  "threshold_ulp": 0,             
+  "range_start": -70.566371,      
+  "range_end": 70.566371,         
+  "range_step": 0.01,             
+  "include_specials": true,       
+  "include_large_multiples": true 
+}
+

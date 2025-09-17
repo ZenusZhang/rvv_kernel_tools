@@ -1,0 +1,79 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+
+# Compiled binaries
+validate_scalar
+validate_exp
+validate_sin
+*.exe
+*.out
+*.app
+
+# Object files
+*.o
+*.obj
+*.ko
+*.elf
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+*.egg
+.Python
+venv/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+
+# Test outputs
+test_results/
+*.png
+*.svg
+*.pdf
+
+# Core dumps
+core
+core.*
+*.core
+
+# Generated files from tests
+*_generated.h
+*_output.txt
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+CTestTestfile.cmake
+Testing/
