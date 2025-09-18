@@ -110,9 +110,13 @@ class RVVConverter:
         for op in operations:
             # Infer type for result variable
             if op.result and op.result != "temp_var":
-                var_type = self.infer_type_from_intrinsic(op.intrinsic, op.operands)
+                mapping = self.get_intrinsic_mapping(op.intrinsic)
+                if mapping and "result_type" in mapping:
+                    var_type = mapping["result_type"]
+                else:
+                    var_type = self.infer_type_from_intrinsic(op.intrinsic, op.operands)
                 variables[op.result] = var_type
-            
+
             # Also track operand variables (non-constants)
             for operand in op.operands:
                 if (not self.is_scalar_constant(operand) and 
@@ -278,11 +282,14 @@ class RVVConverter:
                 rhs_expr = f"/* no mapping for {op.intrinsic} */"
             
             # Determine result type
-            result_type = self.infer_type_from_intrinsic(op.intrinsic, op.operands)
-            
+            if mapping and "result_type" in mapping:
+                result_type = mapping["result_type"]
+            else:
+                result_type = self.infer_type_from_intrinsic(op.intrinsic, op.operands)
+
             # Store SSA variable info
             self.ssa_variables[result_ssa] = result_type
-            
+
             ssa_ops.append(SSAOperation(
                 result_ssa=result_ssa,
                 result_base=base_name,

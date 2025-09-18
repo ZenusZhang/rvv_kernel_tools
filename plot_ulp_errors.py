@@ -120,7 +120,7 @@ def main():
         sys.exit(1)
 
     operation = sys.argv[1]
-    log_path = f"build/{operation}.log"
+    log_path = f"{operation}.log"
 
     if not os.path.exists(log_path):
         print(f"Error: Log file not found: {log_path}")

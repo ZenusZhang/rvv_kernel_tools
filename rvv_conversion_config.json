@@ -20,7 +20,7 @@
       "operands": ["vector", "scalar_constant"],
       "description": "Reverse subtract (constant - vector)"
     },
-    "__riscv_vfadd_vf_f*": {
+    "__riscv_vfadd_v*_f*": {
       "pattern": "{result} = {operand1} + {operand2}",
       "operands": ["vector", "scalar_constant"],
       "description": "Add vector and scalar"

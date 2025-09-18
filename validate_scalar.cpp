@@ -21,7 +21,7 @@ static inline float golden_fn(float x) { return std::sinf(x); }
 static constexpr const char *kKernelName = "sin";
 #elif defined(KERNEL_EXP)
 #define M 23 // mantissa bits for float if generator uses it
-#include "exp_scalar_functions.h"
+#include "build/exp_scalar_functions.h"
 using DebugValues = ExpDebugValues;
 static inline float golden_fn(float x) { return std::exp(x); }
 static constexpr const char *kKernelName = "exp";
